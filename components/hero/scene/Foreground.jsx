@@ -67,12 +67,14 @@ export function Foreground() {
           />
 
           {/* Graceful Horizontal Branch holding the Swing */}
+          {/* Graceful Horizontal Branch holding the Swing */}
           <path
-            d="M16 62C-15 67 -55 72 -115 78C-115 80 -60 76 -12 60C4 54 12 55 16 62Z"
+            d="M20 54C-10 58 -60 63 -135 68C-135 80 -60 77 -10 74C15 72 25 64 20 54Z"
             fill="#3E2C23"
           />
           {/* Branch knot */}
-          <circle cx="-35" cy="70" r="2" fill="#2B1D16" />
+          <circle cx="-35" cy="70" r="2.5" fill="#2B1D16" />
+          <circle cx="-90" cy="69" r="2" fill="#2B1D16" />
 
           {/* --- SLIM, REFINED REALISTIC CANOPY (ছিমছাম ও সুন্দর পাতার বিস্তার) --- */}
           <g className="animate-tree-sway">
@@ -124,32 +126,49 @@ export function Foreground() {
             </g>
           </g>
 
-          {/* --- HANGING TREE SWING (দোলনা) with realistic pendulum swing --- */}
-          <g transform="translate(-95, 82)" className="animate-swing-pendulum">
-            {/* Ropes */}
-            <path d="M0 0C-1 45 -2 90 -4 140" stroke="#D9C3A0" strokeWidth="2" fill="none" />
-            <path d="M18 0C17 45 16 90 14 140" stroke="#D9C3A0" strokeWidth="2" fill="none" />
-            {/* Wooden Plank Seat */}
-            <rect x="-10" y="140" width="32" height="7" rx="2" fill="#D9C3A0" stroke="#3E2C23" strokeWidth="1.4" />
+          {/* --- HANGING TREE SWING (দোলনা) attached securely to branch --- */}
+          <g transform="translate(-90, 68)">
+            {/* Rope loops & tying knots wrapped around the tree branch */}
+            <path d="M-2 -6C2 -7 2 5 -2 6M20 -6C24 -7 24 5 20 6" stroke="#D9C3A0" strokeWidth="2.4" fill="none" />
+            <circle cx="0" cy="5" r="3" fill="#B08968" stroke="#3E2C23" strokeWidth="0.8" />
+            <circle cx="22" cy="5" r="3" fill="#B08968" stroke="#3E2C23" strokeWidth="0.8" />
 
-            {/* Child on swing */}
-            <g transform="translate(-2, 108)" className="animate-swing-kid-kick">
+            {/* Pendulum Swinging Unit (pivots cleanly from the knots on branch) */}
+            <g className="animate-swing-pendulum">
+              {/* Ropes hanging from knots */}
+              <path d="M0 5L0 142" stroke="#D9C3A0" strokeWidth="2.2" strokeLinecap="round" />
+              <path d="M22 5L22 142" stroke="#D9C3A0" strokeWidth="2.2" strokeLinecap="round" />
+
+              {/* Wooden Plank Seat */}
+              <rect x="-8" y="142" width="38" height="7" rx="2" fill="#D9C3A0" stroke="#3E2C23" strokeWidth="1.4" />
+              {/* Rope holes and tassels */}
+              <circle cx="0" cy="145.5" r="1.5" fill="#3E2C23" />
+              <circle cx="22" cy="145.5" r="1.5" fill="#3E2C23" />
+              <path d="M0 149L0 156M22 149L22 156" stroke="#D9C3A0" strokeWidth="2" strokeLinecap="round" />
+
+              {/* Child sitting firmly on the swing seat */}
               {/* Head */}
-              <circle cx="10" cy="6" r="6" fill="#3E2C23" />
-              {/* Hair ribbons flowing */}
+              <circle cx="11" cy="102" r="7.5" fill="#3E2C23" />
+              {/* Hair ribbon flowing */}
               <g className="animate-horse-tail">
-                <path d="M5 3L-1 0L-3 -2" stroke="#C98A7A" strokeWidth="2.2" strokeLinecap="round" />
-                <path d="M15 3L21 0L23 -2" stroke="#C98A7A" strokeWidth="2.2" strokeLinecap="round" />
+                <path d="M5 100C0 96 -3 92 -7 90M5 104C0 102 -4 100 -8 100" stroke="#C98A7A" strokeWidth="2" strokeLinecap="round" />
               </g>
-              {/* Torso */}
-              <rect x="5" y="12" width="10" height="18" fill="#C98A7A" rx="2" />
-              {/* Hands gripping ropes */}
-              <line x1="4" y1="18" x2="-2" y2="16" stroke="#3E2C23" strokeWidth="2.5" />
-              <line x1="16" y1="18" x2="20" y2="16" stroke="#3E2C23" strokeWidth="2.5" />
-              {/* Flying legs */}
-              <path d="M7 30L2 42L0 45M13 30L9 42L7 45" stroke="#3E2C23" strokeWidth="2.8" strokeLinecap="round" />
-              <circle cx="0" cy="46" r="1.5" fill="#3E2C23" />
-              <circle cx="7" cy="46" r="1.5" fill="#3E2C23" />
+              {/* Torso seated flush onto the plank (y=114 to y=142) */}
+              <rect x="5" y="114" width="12" height="28" fill="#C98A7A" rx="3" />
+
+              {/* Hands firmly gripping the ropes */}
+              <line x1="5" y1="122" x2="0" y2="122" stroke="#3E2C23" strokeWidth="3" strokeLinecap="round" />
+              <circle cx="0" cy="122" r="2.2" fill="#B08968" />
+              <line x1="17" y1="122" x2="22" y2="122" stroke="#3E2C23" strokeWidth="3" strokeLinecap="round" />
+              <circle cx="22" cy="122" r="2.2" fill="#B08968" />
+
+              {/* Flying/kicking legs swinging freely from edge of seat */}
+              <g className="animate-swing-kid-kick">
+                <path d="M8 142L4 160L-1 166" stroke="#3E2C23" strokeWidth="3.2" strokeLinecap="round" />
+                <circle cx="-1" cy="167" r="2" fill="#3E2C23" />
+                <path d="M14 142L11 158L7 164" stroke="#3E2C23" strokeWidth="3.2" strokeLinecap="round" />
+                <circle cx="7" cy="165" r="2" fill="#3E2C23" />
+              </g>
             </g>
           </g>
         </g>

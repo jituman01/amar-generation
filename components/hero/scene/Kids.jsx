@@ -10,10 +10,11 @@ export function Kids() {
         className="w-full h-full text-[#3E2C23]"
         fill="none"
       >
-        {/* =========================================================================
-            2. LITTLE GIRL WITH FAST SPINNING CHORKI (চরকি হাতে উচ্ছ্বসিত বালিকা)
-           ========================================================================= */}
-        <g transform="translate(300, 348)">
+        {/* ============ 1. LITTLE GIRL WITH FAST SPINNING CHORKI (চরকি) ============ */}
+        <g transform="translate(300, 346)">
+          {/* Ground Contact Shadow */}
+          <ellipse cx="18" cy="52" rx="16" ry="4.5" fill="#2B1D16" opacity="0.28" />
+
           <g className="animate-chorki-girl">
             {/* Head with bouncing pigtails */}
             <circle cx="18" cy="6" r="7" fill="#3E2C23" />
@@ -51,7 +52,7 @@ export function Kids() {
             <g transform="translate(42, -16)">
               <g className="animate-chorki-spin">
                 <circle cx="0" cy="0" r="3.5" fill="#FAF6EF" stroke="#3E2C23" strokeWidth="1.2" />
-                {/* 4 Curved Blades — bigger */}
+                {/* 4 Curved Blades */}
                 <path d="M0 0C-7 -14 -16 -14 -16 -7C-16 0 -7 0 0 0" fill="#F2C879" stroke="#3E2C23" strokeWidth="1" />
                 <path d="M0 0C14 -7 14 -16 7 -16C0 -16 0 -7 0 0" fill="#C98A7A" stroke="#3E2C23" strokeWidth="1" />
                 <path d="M0 0C7 14 16 14 16 7C16 0 7 0 0 0" fill="#8EA4AE" stroke="#3E2C23" strokeWidth="1" />
@@ -61,10 +62,12 @@ export function Kids() {
           </g>
         </g>
 
-        {/* =========================================================================
-            3. TWO CHILDREN PLAYING MARBLES ON DIRT (মার্বেল খেলা)
-           ========================================================================= */}
-        <g transform="translate(680, 375)">
+        {/* ============ 2. TWO CHILDREN PLAYING MARBLES ON DIRT (মার্বেল খেলা) ============ */}
+        <g transform="translate(680, 368)">
+          {/* Ground Contact Shadows for players */}
+          <ellipse cx="9" cy="38" rx="14" ry="4" fill="#2B1D16" opacity="0.28" />
+          <ellipse cx="64" cy="35" rx="14" ry="4" fill="#2B1D16" opacity="0.28" />
+
           {/* Circular ring on dirt ground */}
           <ellipse cx="32" cy="28" rx="26" ry="10" stroke="#FAF6EF" strokeWidth="1.5" strokeDasharray="4 3" opacity="0.65" />
           <ellipse cx="32" cy="28" rx="23" ry="9" stroke="#D9C3A0" strokeWidth="0.8" opacity="0.3" />
@@ -107,10 +110,11 @@ export function Kids() {
           </g>
         </g>
 
-        {/* =========================================================================
-            4. BOY FLYING KITE WITH LATAAI (ঘুড়ি ওড়ানো ছেলে)
-           ========================================================================= */}
-        <g transform="translate(520, 355)">
+        {/* ============ 3. BOY FLYING KITE WITH LATAAI (ঘুড়ি ওড়ানো ছেলে) ============ */}
+        <g transform="translate(520, 350)">
+          {/* Ground Contact Shadow */}
+          <ellipse cx="18" cy="50" rx="16" ry="4.5" fill="#2B1D16" opacity="0.28" />
+
           <circle cx="18" cy="6" r="6.5" fill="#3E2C23" />
           <path d="M13 2L15 -1M21 2L19 -1" stroke="#2B1D16" strokeWidth="1.2" strokeLinecap="round" />
           <rect x="13" y="13" width="10" height="18" fill="#8EA4AE" rx="2" />
