@@ -1,26 +1,618 @@
 @import "tailwindcss";
 
+@theme {
+  --color-paper: #FAF6EF;
+  --color-cream: #F3EAD9;
+  --color-tan: #D9C3A0;
+  --color-brown-light: #B08968;
+  --color-ink: #3E2C23;
+  --color-ink-soft: #6B5646;
+  --color-rust: #B5651D;
+
+  --font-sans: var(--font-bengali-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: var(--font-bengali-serif), Georgia, serif;
+  --font-latin: var(--font-latin), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #FAF6EF;
+  --foreground: #3E2C23;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar for horizontal categories */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Card canvas styling */
+.card-canvas-node {
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* ========================================================
+   HIGH-REALISM 90s BANGLADESH VILLAGE SCENERY ANIMATIONS
+   ======================================================== */
+
+.svg-origin-bottom {
+  transform-box: fill-box;
+  transform-origin: bottom center;
+}
+.svg-origin-center {
+  transform-box: fill-box;
+  transform-origin: center center;
+}
+.svg-origin-top {
+  transform-box: fill-box;
+  transform-origin: top center;
+}
+
+/* ============================================================
+   1. CLOUDS & SKY — lazy drifting across the horizon
+   ============================================================ */
+@keyframes cloudDriftSlow {
+  0% { transform: translate3d(-10vw, 0, 0); }
+  100% { transform: translate3d(110vw, 0, 0); }
+}
+@keyframes cloudDriftFast {
+  0% { transform: translate3d(-15vw, 0, 0); }
+  100% { transform: translate3d(115vw, 0, 0); }
+}
+.animate-cloud-slow {
+  animation: cloudDriftSlow 130s linear infinite;
+  will-change: transform;
+}
+.animate-cloud-fast {
+  animation: cloudDriftFast 85s linear infinite;
+  will-change: transform;
+}
+
+@keyframes sunPulse {
+  0% { transform: scale(1); opacity: 0.82; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.82; }
+}
+.animate-sun-pulse {
+  animation: sunPulse 7s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ============================================================
+   2. BIRDS — flock traversal + realistic wing-flap
+   ============================================================ */
+@keyframes birdsFlyAcross {
+  0% { transform: translate3d(-15vw, 20px, 0); }
+  100% { transform: translate3d(115vw, -30px, 0); }
+}
+@keyframes birdFlapRealistic {
+  0%, 100% { transform: scaleY(1) rotate(0deg); }
+  25% { transform: scaleY(0.55) rotate(-2deg); }
+  50% { transform: scaleY(0.3) rotate(-4deg); }
+  75% { transform: scaleY(0.55) rotate(-2deg); }
+}
+.animate-birds-fly {
+  animation: birdsFlyAcross 38s linear infinite;
+  will-change: transform;
+}
+.animate-bird-flap {
+  animation: birdFlapRealistic 0.4s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ============================================================
+   3. KITES — wind physics, body sway & tail undulation
+   ============================================================ */
+@keyframes kiteFlight1 {
+  0% { transform: translate3d(0, 0, 0) rotate(-6deg); }
+  15% { transform: translate3d(8px, -8px, 0) rotate(-2deg); }
+  30% { transform: translate3d(16px, -14px, 0) rotate(3deg); }
+  50% { transform: translate3d(10px, 2px, 0) rotate(8deg); }
+  70% { transform: translate3d(-6px, -10px, 0) rotate(-1deg); }
+  85% { transform: translate3d(-12px, -4px, 0) rotate(-4deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(-6deg); }
+}
+@keyframes kiteFlight2 {
+  0% { transform: translate3d(0, 0, 0) rotate(5deg); }
+  20% { transform: translate3d(-8px, -10px, 0) rotate(-2deg); }
+  40% { transform: translate3d(-14px, -16px, 0) rotate(-6deg); }
+  60% { transform: translate3d(4px, 6px, 0) rotate(9deg); }
+  80% { transform: translate3d(10px, -2px, 0) rotate(3deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(5deg); }
+}
+@keyframes kiteTailWave {
+  0%, 100% { transform: rotate(-8deg) scaleY(1); }
+  25% { transform: rotate(6deg) scaleY(0.95); }
+  50% { transform: rotate(12deg) scaleY(1.05); }
+  75% { transform: rotate(-4deg) scaleY(0.98); }
+}
+.animate-kite-1 {
+  animation: kiteFlight1 5.8s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: bottom center;
+  will-change: transform;
+}
+.animate-kite-2 {
+  animation: kiteFlight2 6.5s ease-in-out infinite -2.5s;
+  transform-box: fill-box;
+  transform-origin: bottom center;
+  will-change: transform;
+}
+.animate-kite-tail {
+  animation: kiteTailWave 1.5s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: top center;
+}
+
+/* ============================================================
+   4. TREE SWAY — gentle wind breathing on palms & canopy
+   ============================================================ */
+@keyframes treeSway {
+  0%, 100% { transform: rotate(-1.5deg) skewX(-0.5deg); }
+  30% { transform: rotate(2deg) skewX(1deg); }
+  60% { transform: rotate(-0.5deg) skewX(-0.3deg); }
+  80% { transform: rotate(1.5deg) skewX(0.5deg); }
+}
+.animate-tree-sway {
+  animation: treeSway 5.5s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: bottom center;
+}
+
+/* ============================================================
+   5. GALLOPING HORSE — realistic 4-beat gait cycle
+   ============================================================ */
+@keyframes horseTraverseAcross {
+  0% { transform: translate3d(-120px, 0, 0); }
+  100% { transform: translate3d(calc(100vw + 120px), 0, 0); }
+}
+@keyframes horseGallopTorso {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  15% { transform: translate3d(0, -4px, 0) rotate(-2deg); }
+  30% { transform: translate3d(0, -8px, 0) rotate(-3.5deg); }
+  50% { transform: translate3d(0, -3px, 0) rotate(0.5deg); }
+  70% { transform: translate3d(0, 3px, 0) rotate(2.5deg); }
+  85% { transform: translate3d(0, 5px, 0) rotate(3deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
+@keyframes horseHeadBob {
+  0%, 100% { transform: rotate(0deg) translate3d(0, 0, 0); }
+  20% { transform: rotate(-5deg) translate3d(2px, -4px, 0); }
+  50% { transform: rotate(2deg) translate3d(0, 1px, 0); }
+  80% { transform: rotate(6deg) translate3d(-3px, 4px, 0); }
+}
+@keyframes horseFrontLegs {
+  0% { transform: rotate(-35deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(38deg); }
+  75% { transform: rotate(5deg); }
+  100% { transform: rotate(-35deg); }
+}
+@keyframes horseBackLegs {
+  0% { transform: rotate(36deg); }
+  25% { transform: rotate(-5deg); }
+  50% { transform: rotate(-32deg); }
+  75% { transform: rotate(-8deg); }
+  100% { transform: rotate(36deg); }
+}
+@keyframes horseTailFlow {
+  0%, 100% { transform: rotate(8deg) scaleX(1); }
+  30% { transform: rotate(-10deg) scaleX(1.1); }
+  60% { transform: rotate(-16deg) scaleX(0.95); }
+  80% { transform: rotate(4deg) scaleX(1.05); }
+}
+@keyframes dustBurst {
+  0% { transform: scale(0.3) translate3d(0, 0, 0); opacity: 0.75; }
+  40% { transform: scale(1.0) translate3d(-10px, -6px, 0); opacity: 0.45; }
+  70% { transform: scale(1.6) translate3d(-18px, -12px, 0); opacity: 0.2; }
+  100% { transform: scale(2.2) translate3d(-28px, -18px, 0); opacity: 0; }
+}
+
+.animate-horse-traverse {
+  animation: horseTraverseAcross 20s linear infinite;
+  will-change: transform;
+}
+.animate-horse-torso {
+  animation: horseGallopTorso 0.6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  transform-box: fill-box;
+  transform-origin: center bottom;
+}
+.animate-horse-head {
+  animation: horseHeadBob 0.6s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: left bottom;
+}
+.animate-horse-front-leg {
+  animation: horseFrontLegs 0.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  transform-box: fill-box;
+  transform-origin: 50% 10%;
+}
+.animate-horse-back-leg {
+  animation: horseBackLegs 0.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  transform-box: fill-box;
+  transform-origin: 50% 10%;
+}
+.animate-horse-tail {
+  animation: horseTailFlow 0.6s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: right top;
+}
+.animate-dust-burst {
+  animation: dustBurst 0.6s ease-out infinite;
+  transform-box: fill-box;
+}
+
+/* ============================================================
+   6. JOGGING TYRE ROLLER (টায়ার গড়ানো) — running kid + spinning wheel
+   ============================================================ */
+@keyframes tyreTraverseAcross {
+  0% { transform: translate3d(-100px, 0, 0); }
+  100% { transform: translate3d(calc(100vw + 100px), 0, 0); }
+}
+@keyframes wheelSpinFast {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes kidRunningBob {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  20% { transform: translate3d(0, -5px, 0); }
+  40% { transform: translate3d(0, 1px, 0); }
+  60% { transform: translate3d(0, -6px, 0); }
+  80% { transform: translate3d(0, 2px, 0); }
+}
+@keyframes kidFrontLeg {
+  0% { transform: rotate(-30deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(30deg); }
+  75% { transform: rotate(8deg); }
+  100% { transform: rotate(-30deg); }
+}
+@keyframes kidBackLeg {
+  0% { transform: rotate(28deg); }
+  25% { transform: rotate(-3deg); }
+  50% { transform: rotate(-28deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(28deg); }
+}
+@keyframes stickTap {
+  0%, 100% { transform: rotate(0deg); }
+  30% { transform: rotate(-3deg); }
+  60% { transform: rotate(-6deg); }
+  80% { transform: rotate(2deg); }
+}
+
+.animate-tyre-traverse {
+  animation: tyreTraverseAcross 15s linear infinite;
+  will-change: transform;
+}
+.animate-wheel-spin {
+  animation: wheelSpinFast 0.45s linear infinite;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+.animate-kid-running-bob {
+  animation: kidRunningBob 0.5s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: bottom center;
+}
+.animate-kid-front-leg {
+  animation: kidFrontLeg 0.5s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: top center;
+}
+.animate-kid-back-leg {
+  animation: kidBackLeg 0.5s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: top center;
+}
+.animate-stick-tap {
+  animation: stickTap 0.5s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: left top;
+}
+
+/* ============================================================
+   7. SPINNING CHORKI (চরকি) — fast pinwheel + joyful girl
+   ============================================================ */
+@keyframes chorkiSpinFast {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes chorkiGirlJoy {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  25% { transform: translate3d(0, -3px, 0) rotate(1deg); }
+  50% { transform: translate3d(0, -5px, 0) rotate(2deg); }
+  75% { transform: translate3d(0, -2px, 0) rotate(-0.5deg); }
+}
+@keyframes frockFlutter {
+  0%, 100% { transform: scaleX(1) skewX(0deg); }
+  30% { transform: scaleX(1.06) skewX(1.5deg); }
+  60% { transform: scaleX(0.97) skewX(-1deg); }
+  80% { transform: scaleX(1.04) skewX(2deg); }
+}
+
+.animate-chorki-spin {
+  animation: chorkiSpinFast 0.55s linear infinite;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+.animate-chorki-girl {
+  animation: chorkiGirlJoy 2s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: bottom center;
+}
+.animate-frock-flutter {
+  animation: frockFlutter 1.4s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: top center;
+}
+
+/* ============================================================
+   8. TREE SWING — realistic pendulum with momentum kid kick
+   ============================================================ */
+@keyframes swingRealisticPendulum {
+  0% { transform: rotate(-24deg); }
+  25% { transform: rotate(-4deg); }
+  50% { transform: rotate(26deg); }
+  75% { transform: rotate(6deg); }
+  100% { transform: rotate(-24deg); }
+}
+@keyframes swingKidKick {
+  0% { transform: rotate(-12deg); }
+  25% { transform: rotate(4deg); }
+  50% { transform: rotate(20deg); }
+  75% { transform: rotate(2deg); }
+  100% { transform: rotate(-12deg); }
+}
+
+.animate-swing-pendulum {
+  animation: swingRealisticPendulum 3.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  transform-box: fill-box;
+  transform-origin: 50% 0%;
+  will-change: transform;
+}
+.animate-swing-kid-kick {
+  animation: swingKidKick 3.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  transform-box: fill-box;
+  transform-origin: center top;
+}
+
+/* ============================================================
+   9. MARBLES — flick, strike, and arm snap
+   ============================================================ */
+@keyframes marbleFlickStrike {
+  0%, 60% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  70% {
+    transform: translate3d(12px, 1px, 0);
+    opacity: 1;
+  }
+  78% {
+    transform: translate3d(20px, 2px, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(24px, 3px, 0);
+    opacity: 0.9;
+  }
+}
+@keyframes marbleTargetHit {
+  0%, 76% {
+    transform: translate3d(0, 0, 0);
+  }
+  82% {
+    transform: translate3d(8px, -4px, 0);
+  }
+  90% {
+    transform: translate3d(16px, -8px, 0);
+  }
+  100% {
+    transform: translate3d(20px, -10px, 0) scale(0.9);
+  }
+}
+@keyframes boyFlickArm {
+  0%, 55% { transform: rotate(0deg); }
+  62% { transform: rotate(-18deg); }
+  70% { transform: rotate(22deg); }
+  80% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-marble-flick {
+  animation: marbleFlickStrike 4.8s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+  transform-box: fill-box;
+}
+.animate-marble-hit {
+  animation: marbleTargetHit 4.8s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+  transform-box: fill-box;
+}
+.animate-boy-arm {
+  animation: boyFlickArm 4.8s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: left top;
+}
+
+/* ============================================================
+   10. GRAZING ANIMAL — head dip + tail swish
+   ============================================================ */
+@keyframes goatGraze {
+  0%, 100% { transform: rotate(0deg) translate3d(0, 0, 0); }
+  30% { transform: rotate(5deg) translate3d(0, 2px, 0); }
+  60% { transform: rotate(-3deg) translate3d(0, -1px, 0); }
+  80% { transform: rotate(4deg) translate3d(1px, 1px, 0); }
+}
+@keyframes tailSwish {
+  0%, 100% { transform: rotate(-20deg); }
+  35% { transform: rotate(22deg); }
+  65% { transform: rotate(-15deg); }
+}
+.animate-goat-head {
+  animation: goatGraze 4.5s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: right center;
+}
+.animate-tail-swish {
+  animation: tailSwish 1.4s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: top center;
+}
+
+/* ============================================================
+   11. CLOTHES LINE — blowing in the wind + antenna ribbon
+   ============================================================ */
+@keyframes clothesGust {
+  0% { transform: rotate(-3deg) scaleY(1); }
+  20% { transform: rotate(4deg) scaleY(0.97); }
+  40% { transform: rotate(-2deg) scaleY(1.02); }
+  60% { transform: rotate(5deg) scaleY(0.96); }
+  80% { transform: rotate(-4deg) scaleY(1.01); }
+  100% { transform: rotate(-3deg) scaleY(1); }
+}
+@keyframes ribbonFlutter {
+  0%, 100% { transform: skewY(0deg) scaleX(1); }
+  30% { transform: skewY(-12deg) scaleX(1.15); }
+  60% { transform: skewY(8deg) scaleX(0.9); }
+}
+/* JSX uses "animate-clothes" (Village.jsx line 58) */
+.animate-clothes {
+  animation: clothesGust 3s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: top center;
+}
+.animate-clothes-sway {
+  animation: clothesGust 3s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: top center;
+}
+.animate-ribbon {
+  animation: ribbonFlutter 0.8s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: left center;
+}
+
+/* ============================================================
+   12. CHIMNEY SMOKE — rising curling puffs
+   ============================================================ */
+@keyframes smokePuffRise {
+  0% { transform: translate3d(0, 0, 0) scale(0.5); opacity: 0.75; }
+  30% { transform: translate3d(-4px, -12px, 0) scale(0.9); opacity: 0.55; }
+  60% { transform: translate3d(-10px, -26px, 0) scale(1.4); opacity: 0.3; }
+  100% { transform: translate3d(-18px, -42px, 0) scale(2.0); opacity: 0; }
+}
+/* JSX uses "animate-smoke" (Village.jsx line 22/23) */
+.animate-smoke {
+  animation: smokePuffRise 5s ease-out infinite;
+  transform-box: fill-box;
+}
+.animate-smoke-puff {
+  animation: smokePuffRise 5s ease-out infinite;
+  transform-box: fill-box;
+}
+
+/* ============================================================
+   13. PADDY & GRASS WIND WAVES — alternating field sway
+   ============================================================ */
+@keyframes paddySway1 {
+  0%, 100% { transform: skewX(-3deg) rotate(-1.5deg); }
+  30% { transform: skewX(2deg) rotate(1deg); }
+  60% { transform: skewX(5deg) rotate(2.5deg); }
+  80% { transform: skewX(-1deg) rotate(-0.5deg); }
+}
+@keyframes paddySway2 {
+  0%, 100% { transform: skewX(3deg) rotate(1.5deg); }
+  25% { transform: skewX(-2deg) rotate(-1deg); }
+  55% { transform: skewX(-5deg) rotate(-2.5deg); }
+  75% { transform: skewX(1deg) rotate(0.5deg); }
+}
+@keyframes grassWave1 {
+  0%, 100% { transform: skewX(-3deg) rotate(-1deg); }
+  35% { transform: skewX(3deg) rotate(1.5deg); }
+  65% { transform: skewX(5deg) rotate(2.5deg); }
+}
+@keyframes grassWave2 {
+  0%, 100% { transform: skewX(3deg) rotate(1deg); }
+  40% { transform: skewX(-4deg) rotate(-2deg); }
+  70% { transform: skewX(-2deg) rotate(-1.5deg); }
+}
+/* JSX uses "animate-paddy-1" / "animate-paddy-2" (RiceField.jsx) — grass fixed / off */
+.animate-paddy-1 {
+  animation: none !important;
+}
+.animate-paddy-2 {
+  animation: none !important;
+}
+.animate-grass-wave-1 {
+  animation: none !important;
+}
+.animate-grass-wave-2 {
+  animation: none !important;
+}
+
+/* ============================================================
+   14. BUTTERFLIES — wandering flight path + rapid wing-beat
+   ============================================================ */
+@keyframes butterflyFlightPath {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  15% { transform: translate3d(14px, -12px, 0) rotate(8deg); }
+  30% { transform: translate3d(30px, -6px, 0) rotate(-5deg); }
+  45% { transform: translate3d(24px, 10px, 0) rotate(12deg); }
+  60% { transform: translate3d(38px, -2px, 0) rotate(-8deg); }
+  75% { transform: translate3d(20px, 14px, 0) rotate(6deg); }
+  90% { transform: translate3d(8px, 4px, 0) rotate(-3deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
+@keyframes butterflyWingBeat {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(0.2); }
+}
+/* JSX uses "animate-butterfly" (Ambient.jsx line 10) */
+.animate-butterfly {
+  animation: butterflyFlightPath 10s ease-in-out infinite, butterflyWingBeat 0.2s ease-in-out infinite;
+  transform-box: fill-box;
+}
+.animate-butterfly-path {
+  animation: butterflyFlightPath 10s ease-in-out infinite;
+  transform-box: fill-box;
+}
+.animate-butterfly-wings {
+  animation: butterflyWingBeat 0.2s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center center;
+}
+
+/* ============================================================
+   Battery-saving: pause when offscreen
+   ============================================================ */
+[data-paused="true"] *,
+[data-paused="true"] *::before,
+[data-paused="true"] *::after {
+  animation-play-state: paused !important;
+}
+
+/* ============================================================
+   Accessibility: freeze for prefers-reduced-motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

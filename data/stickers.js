@@ -1,0 +1,51 @@
+export const stickers = [
+  {
+    id: 'field-king',
+    label: 'মাঠের রাজা',
+    icon: 'Trophy',
+    art: 'FieldKingSticker',
+    description: 'আউটডোর ও মাঠের খেলায় পারদর্শী',
+    // Unlocked if outdoor games selected >= 2
+    unlockedBy: { type: 'categoryCount', category: 'games', count: 2 },
+  },
+  {
+    id: 'cartoon-buff',
+    label: 'কার্টুন ভক্ত',
+    icon: 'Tv',
+    art: 'CartoonBuffSticker',
+    description: 'টিভি স্ক্রিন ও কার্টুনের নিখাদ ভক্ত',
+    unlockedBy: { type: 'categoryCount', category: 'cartoons', count: 2 },
+  },
+  {
+    id: 'tiffin-explorer',
+    label: 'টিফিন এক্সপ্লোরার',
+    icon: 'Utensils',
+    art: 'TiffinSticker',
+    description: 'স্কুলের টিফিন ও পাড়ার খাবারের দারুণ সমঝদার',
+    unlockedBy: { type: 'categoryCount', category: 'food', count: 2 },
+  },
+  {
+    id: 'tech-wizard',
+    label: 'টেক জাদুকর',
+    icon: 'Cpu',
+    art: 'TechWizardSticker',
+    description: 'নস্টালজিক গ্যাজেট ও প্রযুক্তির কারিগর',
+    unlockedBy: { type: 'categoryCount', category: 'gadgets', count: 2 },
+  },
+  {
+    id: 'para-champion',
+    label: 'পাড়া চ্যাম্পিয়ন',
+    icon: 'Award',
+    art: 'ParaChampionSticker',
+    description: 'ক্রিকেট, মার্বেল বা লাটিমে অপ্রতিদ্বন্দ্বী',
+    unlockedBy: { type: 'hasAny', ids: ['cricket', 'marbles', 'latim', 'gollachut'] },
+  },
+  {
+    id: 'memory-collector',
+    label: 'স্মৃতি সংগ্রাহক',
+    icon: 'Sparkles',
+    art: 'MemoryCollectorSticker',
+    description: 'অন্তত ৬টি সোনালী স্মৃতি সংগ্রহকারী',
+    unlockedBy: { type: 'minTotal', count: 6 },
+  },
+];
