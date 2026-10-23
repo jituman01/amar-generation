@@ -55,6 +55,51 @@ export const artRegistry = {
   PaperBoatArt: ArtIcons.PaperBoatArt,
   RooftopStarsArt: ArtIcons.RooftopStarsArt,
 
+  // 1990s New Memory Arts
+  GuliKhelaArt: ArtIcons.GuliKhelaArt,
+  DanguliArt: ArtIcons.DanguliArt,
+  EkkaDokkaArt: ArtIcons.EkkaDokkaArt,
+  BouChiArt: ArtIcons.BouChiArt,
+  KanamachiOldArt: ArtIcons.KanamachiOldArt,
+  LuduArt: ArtIcons.LuduArt,
+  GhorBariArt: ArtIcons.GhorBariArt,
+  PittuArt: ArtIcons.PittuArt,
+  RassiLafArt: ArtIcons.RassiLafArt,
+  BorofPaniArt: ArtIcons.BorofPaniArt,
+
+  BlackWhiteTVArt: ArtIcons.BlackWhiteTVArt,
+  BtvFridayArt: ArtIcons.BtvFridayArt,
+  ThakurmarJhuliArt: ArtIcons.ThakurmarJhuliArt,
+  AlifLailaOldArt: ArtIcons.AlifLailaOldArt,
+  MahabharatArt: ArtIcons.MahabharatArt,
+  BioscopeArt: ArtIcons.BioscopeArt,
+
+  JilapiArt: ArtIcons.JilapiArt,
+  BatashaArt: ArtIcons.BatashaArt,
+  IceGolaArt: ArtIcons.IceGolaArt,
+  KachaBadamArt: ArtIcons.KachaBadamArt,
+  BootArt: ArtIcons.BootArt,
+  AmraMakhaArt: ArtIcons.AmraMakhaArt,
+  TalMisriArt: ArtIcons.TalMisriArt,
+  PithaArt: ArtIcons.PithaArt,
+
+  RadioArt: ArtIcons.RadioArt,
+  VcrArt: ArtIcons.VcrArt,
+  CassetteRewindArt: ArtIcons.CassetteRewindArt,
+  LandlinePhoneArt: ArtIcons.LandlinePhoneArt,
+  FloppyDiskArt: ArtIcons.FloppyDiskArt,
+
+  LoadsheddingArt: ArtIcons.LoadsheddingArt,
+  RoofStoryArt: ArtIcons.RoofStoryArt,
+  EidSalamiArt: ArtIcons.EidSalamiArt,
+  VillageFairArt: ArtIcons.VillageFairArt,
+  NanubariOldArt: ArtIcons.NanubariOldArt,
+  SchoolBellArt: ArtIcons.SchoolBellArt,
+  RainyDayArt: ArtIcons.RainyDayArt,
+  WinterMorningArt: ArtIcons.WinterMorningArt,
+  SchoolTiffinArt: ArtIcons.SchoolTiffinArt,
+  MelaShoppingArt: ArtIcons.MelaShoppingArt,
+
   // Stickers
   FieldKingSticker: ArtIcons.FieldKingSticker,
   CartoonBuffSticker: ArtIcons.CartoonBuffSticker,
@@ -62,6 +107,11 @@ export const artRegistry = {
   TechWizardSticker: ArtIcons.TechWizardSticker,
   ParaChampionSticker: ArtIcons.ParaChampionSticker,
   MemoryCollectorSticker: ArtIcons.MemoryCollectorSticker,
+  NinetiesKidSticker: ArtIcons.NinetiesKidSticker,
+  VillageSoulSticker: ArtIcons.VillageSoulSticker,
+  BtvLoverSticker: ArtIcons.BtvLoverSticker,
+  CassetteMasterSticker: ArtIcons.CassetteMasterSticker,
+  EidMemorySticker: ArtIcons.EidMemorySticker,
 };
 
 /**

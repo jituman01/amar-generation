@@ -48,4 +48,58 @@ export const stickers = [
     description: 'অন্তত ৬টি সোনালী স্মৃতি সংগ্রহকারী',
     unlockedBy: { type: 'minTotal', count: 6 },
   },
+  // --- 1990s NOSTALGIA STICKERS ---
+  {
+    id: '90s-kid',
+    label: 'নব্বইয়ের দুরন্ত',
+    icon: 'Sparkles',
+    art: 'NinetiesKidSticker',
+    description: 'নব্বইয়ের শৈশবের স্মৃতিতে ভরপুর',
+    unlockedBy: { type: 'minTotal', count: 10 },
+  },
+  {
+    id: 'village-soul',
+    label: 'গ্রামবাংলার সন্তান',
+    icon: 'House',
+    art: 'VillageSoulSticker',
+    description: 'গ্রামের মাঠ, মেলা আর নানুবাড়ির স্মৃতিতে সমৃদ্ধ',
+    unlockedBy: {
+      type: 'hasAny',
+      ids: ['nanubari-old', 'village-fair', 'ghor-bari'],
+    },
+  },
+  {
+    id: 'btv-lover',
+    label: 'বিটিভি নস্টালজিক',
+    icon: 'Tv',
+    art: 'BtvLoverSticker',
+    description: 'বিটিভির সেই সোনালি দিনের দর্শক',
+    unlockedBy: {
+      type: 'hasAny',
+      ids: ['black-white-tv', 'btv-friday', 'alif-laila-old'],
+    },
+  },
+  {
+    id: 'cassette-master',
+    label: 'ক্যাসেট মাস্টার',
+    icon: 'Music',
+    art: 'CassetteMasterSticker',
+    description: 'ক্যাসেট, রেডিও আর পুরোনো গানের প্রেমিক',
+    unlockedBy: {
+      type: 'hasAny',
+      ids: ['radio', 'vcr', 'cassette-rewind'],
+    },
+  },
+  {
+    id: 'eid-memory',
+    label: 'ঈদের স্মৃতি',
+    icon: 'Gift',
+    art: 'EidMemorySticker',
+    description: 'ঈদের সালামি আর ছোটবেলার আনন্দে ভরপুর',
+    unlockedBy: {
+      type: 'hasAny',
+      ids: ['eid-salami'],
+    },
+  },
 ];
+

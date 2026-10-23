@@ -2,8 +2,8 @@ export const strings = {
   // Hero section verbatim copy
   hero: {
     eyebrow: 'A NOSTALGIC JOURNEY THROUGH TIME',
-    title: 'ছোটবেলার গল্প, নিজের মতো করে।',
-    body: 'তোমার শৈশবের খেলা, কার্টুন, খাবার আর স্মৃতিগুলো বেছে নাও। তৈরি করো তোমার নিজের Generation Card।',
+    title: 'স্মৃতির ক্যানভাসে আমাদের শৈশব।',
+    body: 'তোমার শৈশবের খেলা, খাবার, কার্টুন আর স্মৃতিগুলো বেছে নাও। তৈরি করো AMAR GENERATION CARD.',
     primaryCta: 'Create My Card',
     secondaryCta: 'Explore Memories',
     chips: ['১ যুগ বাছো', '২ স্মৃতি বেছে নাও', '৩ কার্ড ডাউনলোড করো'],

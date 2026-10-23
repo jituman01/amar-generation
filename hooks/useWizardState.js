@@ -67,7 +67,12 @@ export function useWizardState() {
   const setStep = useCallback((step) => {
     setState((prev) => ({ ...prev, step }));
     if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const elem = document.getElementById('create');
+      if (elem) {
+        elem.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
   }, []);
 
@@ -133,7 +138,12 @@ export function useWizardState() {
     setState(DEFAULT_WIZARD_STATE);
     setEraChangeDroppedCount(0);
     if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const elem = document.getElementById('create');
+      if (elem) {
+        elem.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
   }, []);
 

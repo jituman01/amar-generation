@@ -1,20 +1,18 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { strings } from '@/data/strings';
 import { HeroScene } from './HeroScene';
-import { StepChips } from './StepChips';
 import { useReducedMotionSafe } from '@/hooks/useReducedMotionSafe';
-import { Sparkles, ArrowDown } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
 export function Hero() {
   const prefersReducedMotion = useReducedMotionSafe();
 
-  const handleScrollToMemories = (e) => {
-    e.preventDefault();
-    const elem = document.getElementById('memories-preview');
+  const handleScrollToCreate = (e) => {
+    e?.preventDefault();
+    const elem = document.getElementById('create');
     if (elem) {
       elem.scrollIntoView({
         behavior: prefersReducedMotion ? 'auto' : 'smooth',
@@ -70,16 +68,17 @@ export function Hero() {
             {...textVariants(0.28)}
             className="w-full sm:w-auto flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-5 sm:mb-6 mx-auto"
           >
-            <Link
-              href="/create"
+            <a
+              href="#create"
+              onClick={handleScrollToCreate}
               className="w-full sm:w-auto inline-flex items-center justify-center font-medium rounded-xl text-base sm:text-lg px-8 py-3.5 min-h-[50px] bg-ink text-paper hover:bg-ink-soft transition-all duration-200 shadow-md hover:shadow-lg active:scale-[0.98] text-center cursor-pointer"
             >
               {strings.hero.primaryCta}
-            </Link>
+            </a>
 
             <button
               type="button"
-              onClick={handleScrollToMemories}
+              onClick={handleScrollToCreate}
               className="w-full sm:w-auto inline-flex items-center justify-center font-medium rounded-xl text-sm sm:text-base px-6 py-3.5 min-h-[50px] bg-cream/90 backdrop-blur-xs text-ink border border-tan hover:bg-cream transition-all duration-200 active:scale-[0.98] cursor-pointer gap-2 shadow-2xs"
             >
               <span>{strings.hero.secondaryCta}</span>
