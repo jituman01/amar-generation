@@ -1457,6 +1457,526 @@ export function MelaShoppingArt({ className = '', size = 32, ...props }) {
   );
 }
 
+// --- OLD BANGLADESHI CHILDHOOD ART ICONS ---
+
+// 1. Putul Khela (Cloth doll)
+export function PutulKhelaArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <circle cx="24" cy="14" r="7" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2.2" />
+      <circle cx="21.5" cy="13.5" r="1" fill="currentColor" />
+      <circle cx="26.5" cy="13.5" r="1" fill="currentColor" />
+      <path d="M22 17C23 18 25 18 26 17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M17 14C14 15 13 19 14 22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M31 14C34 15 35 19 34 22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M20 21L14 36H34L28 21Z" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
+      <path d="M19 23L11 28" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+      <path d="M29 23L37 28" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+      <line x1="20" y1="36" x2="20" y2="43" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+      <line x1="28" y1="36" x2="28" y2="43" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+      <path d="M22 28L26 32M26 28L22 32" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 2. Narikel Pata Ghori (Coconut leaf watch)
+export function NarikelPataGhoriArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <path d="M19 6H29V17H19Z" fill="currentColor" fillOpacity="0.15" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <path d="M19 31H29V42H19Z" fill="currentColor" fillOpacity="0.15" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <rect x="14" y="17" width="20" height="14" rx="2" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="2.2" />
+      <line x1="24" y1="6" x2="24" y2="17" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2" />
+      <line x1="24" y1="31" x2="24" y2="42" stroke="currentColor" strokeWidth="1.5" strokeDasharray="2 2" />
+      <circle cx="24" cy="24" r="4.5" fill="none" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M24 21V24H26.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <line x1="14" y1="21" x2="16" y2="21" stroke="currentColor" strokeWidth="1.5" />
+      <line x1="14" y1="27" x2="16" y2="27" stroke="currentColor" strokeWidth="1.5" />
+      <line x1="32" y1="21" x2="34" y2="21" stroke="currentColor" strokeWidth="1.5" />
+      <line x1="32" y1="27" x2="34" y2="27" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  );
+}
+
+// 3. Narikel Pata Choshma (Coconut leaf spectacles)
+export function NarikelPataChoshmaArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <circle cx="16" cy="24" r="8" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2.5" />
+      <circle cx="32" cy="24" r="8" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2.5" />
+      <path d="M24 22C23 20 25 20 24 22" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="24" y1="22" x2="24" y2="25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M8 24C6 24 5 18 8 14" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+      <path d="M40 24C42 24 43 18 40 14" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+      <path d="M12 24C16 28 18 20 20 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
+      <path d="M28 24C32 28 34 20 36 24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
+    </svg>
+  );
+}
+
+// 4. Talpatar Pankha (Palm leaf fan)
+export function TalpatarPankhaArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <line x1="24" y1="28" x2="24" y2="44" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+      <path d="M12 28C8 20 12 10 24 8C36 10 40 20 36 28C32 30 16 30 12 28Z" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
+      <line x1="24" y1="28" x2="24" y2="9" stroke="currentColor" strokeWidth="1.8" />
+      <line x1="24" y1="28" x2="16" y2="12" stroke="currentColor" strokeWidth="1.8" />
+      <line x1="24" y1="28" x2="32" y2="12" stroke="currentColor" strokeWidth="1.8" />
+      <line x1="24" y1="28" x2="11" y2="20" stroke="currentColor" strokeWidth="1.8" />
+      <line x1="24" y1="28" x2="37" y2="20" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M10 24C12 28 18 29 24 29C30 29 36 28 38 24" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeDasharray="2 2" />
+    </svg>
+  );
+}
+
+// 5. Kagojer Tupi (Paper hat)
+export function KagojerTupiArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <polygon points="24,10 8,32 40,32" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
+      <polygon points="6,32 42,32 38,38 10,38" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <line x1="24" y1="10" x2="24" y2="32" stroke="currentColor" strokeWidth="1.8" strokeDasharray="3 2" />
+      <line x1="24" y1="10" x2="16" y2="32" stroke="currentColor" strokeWidth="1.2" opacity="0.6" />
+      <line x1="24" y1="10" x2="32" y2="32" stroke="currentColor" strokeWidth="1.2" opacity="0.6" />
+    </svg>
+  );
+}
+
+// 6. Kathi Ghora (Stick horse)
+export function KathiGhoraArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <line x1="38" y1="42" x2="18" y2="18" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+      <path d="M12 24L8 18C7 16 8 13 11 12L15 11L18 7L21 9L21 14L24 16C26 18 25 21 21 24L17 26Z" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
+      <circle cx="13" cy="15" r="1.5" fill="currentColor" />
+      <path d="M10 18L18 20M15 11L18 20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M18 20C22 28 30 32 34 32" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeDasharray="3 2" />
+      <circle cx="38" cy="42" r="3.5" fill="currentColor" fillOpacity="0.4" stroke="currentColor" strokeWidth="1.8" />
+    </svg>
+  );
+}
+
+// 7. Chaka Gorano (Rolling bicycle tire)
+export function ChakaGoranoArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <circle cx="21" cy="27" r="15" fill="currentColor" fillOpacity="0.15" stroke="currentColor" strokeWidth="2.8" />
+      <circle cx="21" cy="27" r="11" fill="none" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="21" cy="27" r="2.5" fill="currentColor" />
+      <line x1="21" y1="16" x2="21" y2="38" stroke="currentColor" strokeWidth="1.2" />
+      <line x1="10" y1="27" x2="32" y2="27" stroke="currentColor" strokeWidth="1.2" />
+      <line x1="42" y1="12" x2="30" y2="25" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M7 40H35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M38 33C40 31 41 28 41 25" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 8. Tin Can Gari (Tin can toy car)
+export function TinCanGariArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <rect x="14" y="14" width="24" height="16" rx="3" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2.2" />
+      <line x1="14" y1="19" x2="38" y2="19" stroke="currentColor" strokeWidth="1.5" />
+      <line x1="14" y1="25" x2="38" y2="25" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="18" cy="33" r="5" fill="currentColor" fillOpacity="0.4" stroke="currentColor" strokeWidth="2" />
+      <circle cx="34" cy="33" r="5" fill="currentColor" fillOpacity="0.4" stroke="currentColor" strokeWidth="2" />
+      <circle cx="18" cy="33" r="1.5" fill="currentColor" />
+      <circle cx="34" cy="33" r="1.5" fill="currentColor" />
+      <line x1="18" y1="30" x2="18" y2="33" stroke="currentColor" strokeWidth="2" />
+      <line x1="34" y1="30" x2="34" y2="33" stroke="currentColor" strokeWidth="2" />
+      <path d="M14 22L6 20C4 19 4 15 6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 9. Matir Putul (Clay doll and pottery)
+export function MatirPutulArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <circle cx="18" cy="14" r="5" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2" />
+      <path d="M15 10C17 8 19 8 21 10" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <circle cx="16.5" cy="14" r="0.8" fill="currentColor" />
+      <circle cx="19.5" cy="14" r="0.8" fill="currentColor" />
+      <path d="M15 19L11 34H25L21 19Z" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <line x1="13" y1="27" x2="23" y2="27" stroke="currentColor" strokeWidth="1.5" />
+      <ellipse cx="34" cy="30" rx="7" ry="5" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2" />
+      <ellipse cx="34" cy="25" rx="4" ry="1.5" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="1.5" />
+      <ellipse cx="34" cy="38" rx="8" ry="2.5" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="1.8" />
+    </svg>
+  );
+}
+
+// 10. Kanchi Banshi (Bamboo twig flute)
+export function KanchiBanshiArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <path d="M8 38L38 8" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" />
+      <line x1="16" y1="32" x2="19" y2="29" stroke="#FAF6EF" strokeWidth="2" strokeLinecap="round" />
+      <line x1="28" y1="20" x2="31" y2="17" stroke="#FAF6EF" strokeWidth="2" strokeLinecap="round" />
+      <circle cx="15" cy="31" r="1.2" fill="#FAF6EF" />
+      <circle cx="19" cy="27" r="1.2" fill="#FAF6EF" />
+      <circle cx="23" cy="23" r="1.2" fill="#FAF6EF" />
+      <circle cx="27" cy="19" r="1.2" fill="#FAF6EF" />
+      <ellipse cx="34" cy="12" rx="1.5" ry="2" fill="#FAF6EF" transform="rotate(-45 34 12)" />
+      <path d="M38 14C41 12 43 14 42 17" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M42 9C45 8 47 11 46 13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 11. Shola Toy (Sholapith craft toy)
+export function SholaToyArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <circle cx="19" cy="18" r="5" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2" />
+      <circle cx="18" cy="17" r="1" fill="currentColor" />
+      <polygon points="14,18 9,19 14,21" fill="currentColor" />
+      <path d="M19 23C15 28 17 35 24 35C29 35 34 31 38 24C34 25 30 24 28 21C25 21 22 21 19 23Z" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <path d="M25 24C28 26 31 28 35 27" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M26 27C29 29 32 30 35 30" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M34 23L41 15M36 25L43 20M37 28L43 26" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <line x1="24" y1="35" x2="24" y2="42" stroke="currentColor" strokeWidth="2" />
+      <ellipse cx="24" cy="42" rx="6" ry="2" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  );
+}
+
+// 12. Ghuri Banano (Making paper kite)
+export function GhuriBananoArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <polygon points="24,6 38,22 24,38 10,22" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
+      <line x1="24" y1="6" x2="24" y2="38" stroke="currentColor" strokeWidth="2" />
+      <path d="M10 22C16 11 32 11 38 22" stroke="currentColor" strokeWidth="2" fill="none" />
+      <polygon points="24,38 20,44 28,44" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      <line x1="6" y1="36" x2="14" y2="44" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <line x1="8" y1="32" x2="16" y2="40" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 13. Rumal Churi (Handkerchief stealing game)
+export function RumalChuriArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <circle cx="24" cy="24" r="15" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.4" />
+      <circle cx="24" cy="9" r="2.5" fill="currentColor" />
+      <circle cx="37" cy="17" r="2.5" fill="currentColor" />
+      <circle cx="37" cy="31" r="2.5" fill="currentColor" />
+      <circle cx="24" cy="39" r="2.5" fill="currentColor" />
+      <circle cx="11" cy="31" r="2.5" fill="currentColor" />
+      <circle cx="11" cy="17" r="2.5" fill="currentColor" />
+      <path d="M28 36L34 38L32 44L26 42Z" fill="currentColor" fillOpacity="0.4" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="M16 8C20 6 28 6 32 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <polyline points="30,5 33,8 30,11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+// 14. Dariabandha (Dariabandha grid field)
+export function DariabandhaArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <rect x="8" y="10" width="32" height="28" rx="2" fill="currentColor" fillOpacity="0.1" stroke="currentColor" strokeWidth="2.2" />
+      <line x1="24" y1="10" x2="24" y2="38" stroke="currentColor" strokeWidth="2.2" />
+      <line x1="8" y1="19" x2="40" y2="19" stroke="currentColor" strokeWidth="2" />
+      <line x1="8" y1="29" x2="40" y2="29" stroke="currentColor" strokeWidth="2" />
+      <circle cx="24" cy="19" r="2" fill="currentColor" />
+      <circle cx="16" cy="29" r="2" fill="currentColor" />
+      <circle cx="32" cy="29" r="2" fill="currentColor" />
+      <circle cx="24" cy="10" r="2" fill="currentColor" />
+    </svg>
+  );
+}
+
+// 15. Bioscope Old (Vintage Bioscope)
+export function BioscopeOldArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <rect x="8" y="12" width="32" height="18" rx="3" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2.2" />
+      <circle cx="16" cy="21" r="3.5" fill="currentColor" fillOpacity="0.4" stroke="currentColor" strokeWidth="2" />
+      <circle cx="24" cy="21" r="3.5" fill="currentColor" fillOpacity="0.4" stroke="currentColor" strokeWidth="2" />
+      <circle cx="32" cy="21" r="3.5" fill="currentColor" fillOpacity="0.4" stroke="currentColor" strokeWidth="2" />
+      <path d="M12 12L16 8L20 12L24 8L28 12L32 8L36 12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M40 18H44V23H41" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <line x1="12" y1="30" x2="8" y2="42" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+      <line x1="24" y1="30" x2="24" y2="42" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+      <line x1="36" y1="30" x2="40" y2="42" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 16. Putul Nach (Puppet dance show)
+export function PutulNachArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <path d="M6 8H42V14C38 12 34 12 30 14C26 12 22 12 18 14C14 12 10 12 6 14Z" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <path d="M6 14V38H11V14" fill="currentColor" fillOpacity="0.15" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M42 14V38H37V14" fill="currentColor" fillOpacity="0.15" stroke="currentColor" strokeWidth="1.8" />
+      <line x1="20" y1="16" x2="28" y2="16" stroke="currentColor" strokeWidth="2" />
+      <line x1="21" y1="16" x2="19" y2="25" stroke="currentColor" strokeWidth="1.2" strokeDasharray="2 1" />
+      <line x1="27" y1="16" x2="29" y2="25" stroke="currentColor" strokeWidth="1.2" strokeDasharray="2 1" />
+      <line x1="24" y1="16" x2="24" y2="22" stroke="currentColor" strokeWidth="1.2" strokeDasharray="2 1" />
+      <circle cx="24" cy="24" r="3" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M20 27L17 31M28 27L31 31" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M22 27L20 36H28L26 27Z" fill="currentColor" fillOpacity="0.4" stroke="currentColor" strokeWidth="1.8" />
+      <line x1="22" y1="36" x2="20" y2="42" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <line x1="26" y1="36" x2="28" y2="42" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 17. Gramer Jatra (Village jatra drama)
+export function GramerJatraArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <path d="M12 28L14 16L20 22L24 12L28 22L34 16L36 28Z" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
+      <rect x="12" y="28" width="24" height="4" rx="1" fill="currentColor" fillOpacity="0.4" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="24" cy="30" r="1" fill="#FAF6EF" />
+      <circle cx="18" cy="30" r="1" fill="#FAF6EF" />
+      <circle cx="30" cy="30" r="1" fill="#FAF6EF" />
+      <path d="M18 37C20 35 23 37 24 39C25 37 28 35 30 37C32 39 34 37 35 35C33 41 29 42 24 40C19 42 15 41 13 35C14 37 16 39 18 37Z" fill="currentColor" />
+      <line x1="7" y1="8" x2="15" y2="14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <line x1="41" y1="8" x2="33" y2="14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 18. Gramer Circus (Village circus tent)
+export function GramerCircusArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <path d="M24 8L8 24H40L24 8Z" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
+      <rect x="10" y="24" width="28" height="14" fill="currentColor" fillOpacity="0.1" stroke="currentColor" strokeWidth="2" />
+      <path d="M20 38V30C20 28 28 28 28 30V38" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="2" />
+      <line x1="24" y1="8" x2="16" y2="24" stroke="currentColor" strokeWidth="1.8" />
+      <line x1="24" y1="8" x2="32" y2="24" stroke="currentColor" strokeWidth="1.8" />
+      <line x1="24" y1="8" x2="24" y2="4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <polygon points="24,4 31,6 24,8" fill="currentColor" />
+    </svg>
+  );
+}
+
+// 19. Dadu Rupkotha (Fairy tale story)
+export function DaduRupkothaArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <path d="M8 32C14 30 20 32 24 35C28 32 34 30 40 32V18C34 16 28 18 24 21C20 18 14 16 8 18Z" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
+      <line x1="24" y1="21" x2="24" y2="35" stroke="currentColor" strokeWidth="2" />
+      <path d="M32 8C30 9 29 11 30 14C31 17 33 18 36 18C34 20 31 20 28 18C25 15 26 10 29 8C30 7 31 7 32 8Z" fill="currentColor" />
+      <polygon points="18,10 19,12 21,13 19,14 18,16 17,14 15,13 17,12" fill="currentColor" />
+      <circle cx="12" cy="12" r="1.2" fill="currentColor" />
+      <circle cx="38" cy="11" r="1" fill="currentColor" />
+    </svg>
+  );
+}
+
+// 20. Feriwalar Haak (Hawker / Vendor)
+export function FeriwalarHaakArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <path d="M6 18C16 14 32 14 42 18" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" />
+      <line x1="10" y1="17" x2="8" y2="28" stroke="currentColor" strokeWidth="1.8" />
+      <line x1="16" y1="16" x2="18" y2="28" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M6 28H20L18 38H8L6 28Z" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <line x1="32" y1="16" x2="30" y2="28" stroke="currentColor" strokeWidth="1.8" />
+      <line x1="38" y1="17" x2="40" y2="28" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M28 28H42L40 38H30L28 28Z" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <path d="M22 8C23 6 25 6 26 8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 21. Hatbarer Mela (Weekly village haat)
+export function HatbarerMelaArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <polygon points="6,18 24,10 42,18 38,22 10,22" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <line x1="11" y1="22" x2="11" y2="38" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+      <line x1="37" y1="22" x2="37" y2="38" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+      <line x1="8" y1="34" x2="40" y2="34" stroke="currentColor" strokeWidth="2" />
+      <ellipse cx="20" cy="35" rx="5" ry="3.5" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="1.8" />
+      <ellipse cx="28" cy="35" rx="5" ry="3.5" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M24 22V27M22 25C23 27 25 27 26 25" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 22. Grameen Dola (Rope swing on tree branch)
+export function GrameenDolaArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <path d="M6 10C16 11 30 9 42 13" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" />
+      <path d="M8 10C7 6 12 5 15 8C18 5 23 6 22 9" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M28 9C29 5 35 6 36 9C38 6 42 8 41 12" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="1.8" />
+      <line x1="19" y1="11" x2="18" y2="34" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <line x1="29" y1="11" x2="28" y2="34" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <rect x="14" y="34" width="20" height="4" rx="1.5" fill="currentColor" fillOpacity="0.4" stroke="currentColor" strokeWidth="2" />
+      <line x1="18" y1="38" x2="17" y2="42" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <line x1="28" y1="38" x2="27" y2="42" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 23. Kupir Alo (Traditional oil lamp)
+export function KupirAloArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <path d="M14 38C14 30 18 24 24 24C30 24 34 30 34 38H14Z" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
+      <rect x="12" y="38" width="24" height="4" rx="1" fill="currentColor" fillOpacity="0.35" stroke="currentColor" strokeWidth="1.8" />
+      <rect x="22" y="19" width="4" height="5" fill="currentColor" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M24 8C27 12 28 15 26 19H22C20 15 21 12 24 8Z" fill="currentColor" fillOpacity="0.5" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      <line x1="24" y1="4" x2="24" y2="6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <line x1="16" y1="10" x2="18" y2="12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <line x1="32" y1="10" x2="30" y2="12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 24. Slate Pencil (Wooden slate board and chalk)
+export function SlatePencilArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <rect x="8" y="10" width="30" height="26" rx="2" fill="currentColor" fillOpacity="0.1" stroke="currentColor" strokeWidth="2.5" />
+      <rect x="12" y="14" width="22" height="18" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M17 19C19 18 21 19 21 21C21 23 19 24 17 23M21 21H24M24 18V26" stroke="#FAF6EF" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <line x1="30" y1="38" x2="40" y2="26" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+      <line x1="30" y1="38" x2="28" y2="40" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 25. Dak Piyon (Postman letters & bag)
+export function DakPiyonArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <rect x="10" y="22" width="28" height="20" rx="3" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2.2" />
+      <polygon points="10,22 24,32 38,22" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <rect x="22" y="30" width="4" height="5" rx="1" fill="currentColor" />
+      <path d="M6 10C10 14 18 22 24 22C30 22 38 14 42 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <rect x="18" y="12" width="16" height="10" rx="1" fill="#FAF6EF" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M18 12L26 18L34 12" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      <circle cx="30" cy="15" r="1.5" fill="currentColor" />
+    </svg>
+  );
+}
+
+// 26. Hater Chithi (Handwritten inland envelope)
+export function HaterChithiArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <rect x="8" y="12" width="32" height="24" rx="2" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2.2" />
+      <polyline points="8,12 24,25 40,12" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <rect x="30" y="15" width="7" height="8" rx="1" fill="currentColor" fillOpacity="0.4" stroke="currentColor" strokeWidth="1.2" />
+      <circle cx="33.5" cy="19" r="1.5" fill="#FAF6EF" />
+      <circle cx="27" cy="18" r="4.5" stroke="currentColor" strokeWidth="1.2" strokeDasharray="2 1.5" />
+      <line x1="22" y1="18" x2="32" y2="18" stroke="currentColor" strokeWidth="1" />
+      <line x1="14" y1="28" x2="26" y2="28" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      <line x1="14" y1="32" x2="32" y2="32" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 27. Old Photo Studio (Vintage framed studio photo)
+export function OldPhotoStudioArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <rect x="10" y="8" width="28" height="32" rx="3" fill="currentColor" fillOpacity="0.1" stroke="currentColor" strokeWidth="2.5" />
+      <rect x="14" y="12" width="20" height="24" rx="2" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="24" cy="20" r="4" fill="currentColor" />
+      <path d="M17 32C17 27 21 26 24 26C27 26 31 27 31 32" fill="currentColor" />
+      <path d="M10 12C12 12 12 10 12 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M38 12C36 12 36 10 36 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <polygon points="38,8 39,10 41,11 39,12 38,14 37,12 35,11 37,10" fill="currentColor" />
+    </svg>
+  );
+}
+
+// 28. Matir Bank (Terracotta coin bank)
+export function MatirBankArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <circle cx="24" cy="26" r="14" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2.5" />
+      <ellipse cx="24" cy="38" rx="8" ry="2.5" fill="currentColor" fillOpacity="0.35" stroke="currentColor" strokeWidth="1.8" />
+      <ellipse cx="24" cy="14" rx="4.5" ry="1.2" fill="currentColor" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="24" cy="8" r="3.5" fill="currentColor" fillOpacity="0.4" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M24 6V10" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M16 26C18 30 22 30 24 26C26 22 30 22 32 26" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 29. Gramophone Old (Vintage gramophone)
+export function GramophoneOldArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <rect x="8" y="30" width="32" height="12" rx="2" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2.2" />
+      <ellipse cx="24" cy="30" rx="12" ry="3.5" fill="currentColor" fillOpacity="0.4" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M26 25C26 19 28 15 36 10L38 18C30 20 28 22 26 25Z" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <ellipse cx="37" cy="14" rx="3.5" ry="5.5" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2" transform="rotate(-25 37 14)" />
+      <path d="M14 26L20 28" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <circle cx="20" cy="28" r="1.5" fill="currentColor" />
+      <path d="M40 35H44V39" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+// 30. Old Radio Request (Radio song listening)
+export function OldRadioRequestArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <rect x="8" y="16" width="32" height="24" rx="3" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2.2" />
+      <line x1="12" y1="16" x2="6" y2="7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+      <circle cx="6" cy="7" r="1.5" fill="currentColor" />
+      <rect x="12" y="21" width="14" height="14" rx="1.5" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="1.5" />
+      <line x1="15" y1="24" x2="23" y2="24" stroke="currentColor" strokeWidth="1.2" />
+      <line x1="15" y1="28" x2="23" y2="28" stroke="currentColor" strokeWidth="1.2" />
+      <line x1="15" y1="32" x2="23" y2="32" stroke="currentColor" strokeWidth="1.2" />
+      <rect x="28" y="21" width="9" height="5" rx="1" stroke="currentColor" strokeWidth="1.5" />
+      <line x1="32" y1="21" x2="32" y2="26" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="30" cy="31" r="2" fill="currentColor" />
+      <circle cx="35" cy="31" r="2" fill="currentColor" />
+      <path d="M38 12V7M38 7L43 5V10" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="37" cy="12" r="1.5" fill="currentColor" />
+      <circle cx="42" cy="10" r="1.5" fill="currentColor" />
+    </svg>
+  );
+}
+
+// 31. Hariken Old (Hurricane kerosene lantern)
+export function HarikenOldArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <ellipse cx="24" cy="39" rx="11" ry="4" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="2" />
+      <path d="M19 14H29L27 10H21L19 14Z" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <rect x="22" y="7" width="4" height="3" rx="1" fill="currentColor" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M19 14C15 20 15 28 17 35H31C33 28 33 20 29 14Z" fill="currentColor" fillOpacity="0.15" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <path d="M24 26C25.5 28 26 30 25 32H23C22 30 22.5 28 24 26Z" fill="currentColor" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      <path d="M17 35C12 35 11 18 19 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M31 35C36 35 37 18 29 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      <path d="M13 25C13 10 35 10 35 25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// 32. Old Camera (Vintage film camera)
+export function OldCameraArt({ className = '', size = 32, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" className={className} {...props}>
+      <rect x="7" y="15" width="34" height="24" rx="4" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2.5" />
+      <rect x="7" y="21" width="34" height="13" fill="currentColor" fillOpacity="0.1" />
+      <circle cx="24" cy="27" r="9" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="2.2" />
+      <circle cx="24" cy="27" r="5.5" fill="currentColor" fillOpacity="0.35" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="22" cy="25" r="1.5" fill="#FAF6EF" />
+      <rect x="30" y="18" width="6" height="4" rx="1" fill="currentColor" stroke="currentColor" strokeWidth="1.2" />
+      <rect x="11" y="11" width="4" height="4" rx="1" fill="currentColor" stroke="currentColor" strokeWidth="1.5" />
+      <rect x="33" y="11" width="5" height="4" rx="1" fill="currentColor" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  );
+}
+
 // --- NEW 1990s NOSTALGIA STICKERS ---
 
 // 40. 90s Kid Sticker

@@ -100,6 +100,40 @@ export const artRegistry = {
   SchoolTiffinArt: ArtIcons.SchoolTiffinArt,
   MelaShoppingArt: ArtIcons.MelaShoppingArt,
 
+  // Old Bangladeshi Childhood Art Icons
+  PutulKhelaArt: ArtIcons.PutulKhelaArt,
+  NarikelPataGhoriArt: ArtIcons.NarikelPataGhoriArt,
+  NarikelPataChoshmaArt: ArtIcons.NarikelPataChoshmaArt,
+  TalpatarPankhaArt: ArtIcons.TalpatarPankhaArt,
+  KagojerTupiArt: ArtIcons.KagojerTupiArt,
+  KathiGhoraArt: ArtIcons.KathiGhoraArt,
+  ChakaGoranoArt: ArtIcons.ChakaGoranoArt,
+  TinCanGariArt: ArtIcons.TinCanGariArt,
+  MatirPutulArt: ArtIcons.MatirPutulArt,
+  KanchiBanshiArt: ArtIcons.KanchiBanshiArt,
+  SholaToyArt: ArtIcons.SholaToyArt,
+  GhuriBananoArt: ArtIcons.GhuriBananoArt,
+  RumalChuriArt: ArtIcons.RumalChuriArt,
+  DariabandhaArt: ArtIcons.DariabandhaArt,
+  BioscopeOldArt: ArtIcons.BioscopeOldArt,
+  PutulNachArt: ArtIcons.PutulNachArt,
+  GramerJatraArt: ArtIcons.GramerJatraArt,
+  GramerCircusArt: ArtIcons.GramerCircusArt,
+  DaduRupkothaArt: ArtIcons.DaduRupkothaArt,
+  FeriwalarHaakArt: ArtIcons.FeriwalarHaakArt,
+  HatbarerMelaArt: ArtIcons.HatbarerMelaArt,
+  GrameenDolaArt: ArtIcons.GrameenDolaArt,
+  KupirAloArt: ArtIcons.KupirAloArt,
+  SlatePencilArt: ArtIcons.SlatePencilArt,
+  DakPiyonArt: ArtIcons.DakPiyonArt,
+  HaterChithiArt: ArtIcons.HaterChithiArt,
+  OldPhotoStudioArt: ArtIcons.OldPhotoStudioArt,
+  MatirBankArt: ArtIcons.MatirBankArt,
+  GramophoneOldArt: ArtIcons.GramophoneOldArt,
+  OldRadioRequestArt: ArtIcons.OldRadioRequestArt,
+  HarikenOldArt: ArtIcons.HarikenOldArt,
+  OldCameraArt: ArtIcons.OldCameraArt,
+
   // Stickers
   FieldKingSticker: ArtIcons.FieldKingSticker,
   CartoonBuffSticker: ArtIcons.CartoonBuffSticker,
@@ -113,6 +147,8 @@ export const artRegistry = {
   CassetteMasterSticker: ArtIcons.CassetteMasterSticker,
   EidMemorySticker: ArtIcons.EidMemorySticker,
 };
+
+export const artComponents = artRegistry;
 
 /**
  * Static component to render any art or sticker by name safely.

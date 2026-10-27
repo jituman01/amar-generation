@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo, useCallback, useSyncExternalStore } from 'react';
-import { loadWizardState, saveWizardState, clearWizardState, DEFAULT_WIZARD_STATE } from '@/lib/storage';
+import { clearWizardState, DEFAULT_WIZARD_STATE } from '@/lib/storage';
 import { memories } from '@/data/memories';
 import { calculateDna } from '@/lib/dna';
 import { getUnlockedStickers } from '@/lib/unlocks';
@@ -19,20 +19,14 @@ export function useWizardState() {
     () => false
   );
 
-  const [state, setState] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return loadWizardState();
-    }
-    return DEFAULT_WIZARD_STATE;
-  });
+  const [state, setState] = useState(DEFAULT_WIZARD_STATE);
 
   const [eraChangeDroppedCount, setEraChangeDroppedCount] = useState(0);
 
-  // Persist to localStorage on state changes once hydrated
+  // Clean any legacy persistent storage on mount
   useEffect(() => {
-    if (!hydrated) return;
-    saveWizardState(state);
-  }, [state, hydrated]);
+    clearWizardState();
+  }, []);
 
   // Derived: Available memories for currently selected era
   const availableMemories = useMemo(() => {
