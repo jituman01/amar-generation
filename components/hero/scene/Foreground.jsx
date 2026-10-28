@@ -48,7 +48,7 @@ export function Foreground() {
 
         <path
           d="M0 430C140 418 300 435 480 422C680 408 880 430 1060 418C1140 413 1180 418 1200 416V520H0V430Z"
-          fill="#3E2C23"
+          fill="#465a47"
           fillOpacity="0.88"
         />
 

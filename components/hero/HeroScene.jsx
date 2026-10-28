@@ -74,54 +74,66 @@ export function HeroScene() {
       <motion.div
         {...layerEntrance(0.25)}
         style={{ y: prefersReducedMotion ? 0 : farY }}
-        className="absolute bottom-0 left-0 right-0 w-full h-[58vh] sm:h-full sm:inset-0"
+        className="absolute bottom-0 left-0 right-0 w-full h-[42%] xs:h-[45%] sm:h-full sm:inset-0"
       >
-        <TreeLine />
+        <div className="w-full h-full origin-bottom scale-[1.12] xs:scale-[1.08] sm:scale-100">
+          <TreeLine />
+        </div>
       </motion.div>
 
       {/* 5. Village Mid-Ground (Huts, TV antenna, drying clothes, tube-well, cow) */}
       <motion.div
         {...layerEntrance(0.32)}
         style={{ y: prefersReducedMotion ? 0 : midY }}
-        className="absolute bottom-0 left-0 right-0 w-full h-[58vh] sm:h-full sm:inset-0"
+        className="absolute bottom-0 left-0 right-0 w-full h-[42%] xs:h-[45%] sm:h-full sm:inset-0"
       >
-        <Village />
+        <div className="w-full h-full origin-bottom scale-[1.12] xs:scale-[1.08] sm:scale-100">
+          <Village />
+        </div>
       </motion.div>
 
       {/* 6. Rice Field */}
       <motion.div
         {...layerEntrance(0.38)}
         style={{ y: prefersReducedMotion ? 0 : midY }}
-        className="absolute bottom-0 left-0 right-0 w-full h-[58vh] sm:h-full sm:inset-0"
+        className="absolute bottom-0 left-0 right-0 w-full h-[42%] xs:h-[45%] sm:h-full sm:inset-0"
       >
-        <RiceField />
+        <div className="w-full h-full origin-bottom scale-[1.12] xs:scale-[1.08] sm:scale-100">
+          <RiceField />
+        </div>
       </motion.div>
 
       {/* 7. Foreground Soil, Big Banyan Tree & Rope Swing */}
       <motion.div
         {...layerEntrance(0.5)}
         style={{ y: prefersReducedMotion ? 0 : nearY }}
-        className="absolute bottom-0 left-0 right-0 w-full h-[58vh] sm:h-full sm:inset-0"
+        className="absolute bottom-0 left-0 right-0 w-full h-[42%] xs:h-[45%] sm:h-full sm:inset-0"
       >
-        <Foreground />
+        <div className="w-full h-full origin-bottom scale-[1.12] xs:scale-[1.08] sm:scale-100">
+          <Foreground />
+        </div>
       </motion.div>
 
       {/* 8. Kids Playing (Chorki, Marbles, Kite) */}
       <motion.div
         {...layerEntrance(0.56)}
         style={{ y: prefersReducedMotion ? 0 : nearY }}
-        className="absolute bottom-0 left-0 right-0 w-full h-[58vh] sm:h-full sm:inset-0"
+        className="absolute bottom-0 left-0 right-0 w-full h-[42%] xs:h-[45%] sm:h-full sm:inset-0"
       >
-        <Kids />
+        <div className="w-full h-full origin-bottom scale-[1.12] xs:scale-[1.08] sm:scale-100">
+          <Kids />
+        </div>
       </motion.div>
 
       {/* 9. Ambient Butterflies & Fauna */}
       <motion.div
         {...layerEntrance(0.62)}
         style={{ y: prefersReducedMotion ? 0 : nearY }}
-        className="absolute bottom-0 left-0 right-0 w-full h-[58vh] sm:h-full sm:inset-0"
+        className="absolute bottom-0 left-0 right-0 w-full h-[42%] xs:h-[45%] sm:h-full sm:inset-0"
       >
-        <Ambient />
+        <div className="w-full h-full origin-bottom scale-[1.12] xs:scale-[1.08] sm:scale-100">
+          <Ambient />
+        </div>
       </motion.div>
     </div>
   );

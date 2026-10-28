@@ -12,81 +12,105 @@ export function Hero() {
 
   const handleScrollToCreate = (e) => {
     e?.preventDefault();
+
     const elem = document.getElementById('create');
+
     if (elem) {
       elem.scrollIntoView({
         behavior: prefersReducedMotion ? 'auto' : 'smooth',
+        block: 'start',
       });
     }
   };
 
   const textVariants = (delay = 0) =>
     prefersReducedMotion
-      ? { initial: {}, animate: {} }
+      ? {
+          initial: {},
+          animate: {},
+        }
       : {
-        initial: { opacity: 0, y: 12 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.5, delay, ease: 'easeOut' },
-      };
+          initial: { opacity: 0, y: 12 },
+          animate: { opacity: 1, y: 0 },
+          transition: {
+            duration: 0.5,
+            delay,
+            ease: 'easeOut',
+          },
+        };
 
   return (
-    <section id="home" className="relative min-h-screen min-h-[100svh] w-full flex flex-col justify-start sm:justify-center items-center overflow-hidden bg-paper text-ink select-none">
-      {/* 1. Scenery fully visible in the background */}
+    <section
+      id="home"
+      className="relative isolate flex min-h-[72vh] xs:min-h-[78vh] sm:min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-paper text-ink select-none"
+    >
+      {/* Background scenery */}
       <HeroScene />
 
-      {/* Subtle soft top vignette on mobile for crystal-clear readability without blocking scenery */}
-      <div className="absolute top-0 left-0 right-0 h-72 sm:h-96 bg-gradient-to-b from-paper/35 via-paper/10 to-transparent pointer-events-none z-10 sm:hidden" />
+      {/* Soft top vignette on mobile */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 z-10 h-36 bg-gradient-to-b from-paper/35 via-paper/10 to-transparent sm:h-96 sm:hidden"
+      />
 
-      {/* 2. Text and buttons overlaid directly over the scenery */}
-      <div className="relative z-20 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-44 xs:pt-48 sm:pt-16 md:pt-20 pb-8 sm:pb-36 md:pb-44 flex flex-col items-center justify-center text-center pointer-events-auto">
-        <div className="w-full max-w-lg sm:max-w-3xl flex flex-col items-center justify-center text-center mx-auto">
-          {/* H1 Title */}
+      {/* Main content */}
+      <div className="relative z-20 mx-auto flex w-full max-w-4xl flex-col items-center justify-center px-3 py-3 text-center sm:px-6 sm:py-16 lg:px-8">
+        <div className="mx-auto flex w-full max-w-lg flex-col items-center justify-center text-center sm:max-w-3xl">
+
+          {/* Heading */}
           <motion.h1
             {...textVariants(0.12)}
-            className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-serif font-bold text-ink leading-[1.28] tracking-tight mb-3 sm:mb-4 text-center max-w-md sm:max-w-none mx-auto"
+            className="mx-auto mb-1 w-full max-w-md text-center font-serif text-2xl font-bold leading-[1.2] tracking-tight text-ink xs:text-3xl sm:mb-4 sm:max-w-none sm:text-4xl md:text-5xl lg:text-[3.5rem]"
             style={{ fontFamily: 'var(--font-bengali-serif)' }}
           >
             {strings.hero.title}
           </motion.h1>
 
-          {/* Body Text */}
+          {/* Description */}
           <motion.p
             {...textVariants(0.2)}
-            className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-ink-soft leading-relaxed mb-4 sm:mb-7 max-w-xs xs:max-w-sm sm:max-w-xl text-center mx-auto"
+            className="mx-auto mb-1.5 w-full max-w-xs text-center text-xs leading-[1.35] text-ink-soft xs:max-w-sm xs:text-sm sm:mb-7 sm:max-w-xl sm:text-base md:text-lg lg:text-xl"
           >
             {strings.hero.body}
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* CTA buttons */}
           <motion.div
             {...textVariants(0.28)}
-            className="w-full flex flex-row items-center justify-center gap-2.5 sm:gap-4 mb-3.5 sm:mb-5 mx-auto max-w-xs xs:max-w-sm sm:max-w-none text-center"
+            className="mx-auto mb-1 flex w-full max-w-[320px] flex-row items-center justify-center gap-1.5 text-center sm:mb-5 sm:max-w-none sm:gap-4"
           >
+            {/* Primary CTA */}
             <a
               href="#create"
               onClick={handleScrollToCreate}
-              className="flex-1 sm:flex-initial inline-flex items-center justify-center font-medium rounded-xl text-xs xs:text-sm sm:text-lg px-4 sm:px-8 py-2.5 sm:py-3.5 min-h-[44px] sm:min-h-[50px] bg-ink text-paper hover:bg-ink-soft transition-all duration-200 shadow-sm hover:shadow-md active:scale-[0.98] text-center cursor-pointer whitespace-nowrap"
+              className="inline-flex min-h-[30px] min-w-0 flex-1 items-center justify-center whitespace-nowrap rounded-md bg-ink px-2.5 py-1 text-center text-[11px] font-medium text-paper shadow-sm transition-all duration-200 hover:bg-ink-soft hover:shadow-md active:scale-[0.98] cursor-pointer xs:min-h-[34px] xs:px-3 xs:py-1.5 xs:text-xs sm:min-h-[50px] sm:flex-initial sm:rounded-xl sm:px-8 sm:py-3.5 sm:text-lg"
             >
               {strings.hero.primaryCta}
             </a>
 
+            {/* Secondary CTA */}
             <button
               type="button"
               onClick={handleScrollToCreate}
-              className="flex-1 sm:flex-initial inline-flex items-center justify-center font-medium rounded-xl text-xs xs:text-sm sm:text-base px-3.5 sm:px-6 py-2.5 sm:py-3.5 min-h-[44px] sm:min-h-[50px] bg-cream/90 backdrop-blur-xs text-ink border border-tan hover:bg-cream transition-all duration-200 active:scale-[0.98] cursor-pointer gap-1.5 sm:gap-2 shadow-2xs whitespace-nowrap"
+              className="inline-flex min-h-[30px] min-w-0 flex-1 items-center justify-center gap-1 whitespace-nowrap rounded-md border border-tan bg-cream/90 px-2 py-1 text-center text-[11px] font-medium text-ink shadow-sm backdrop-blur-sm transition-all duration-200 hover:bg-cream active:scale-[0.98] cursor-pointer xs:min-h-[34px] xs:gap-1.5 xs:px-3 xs:py-1.5 xs:text-xs sm:min-h-[50px] sm:flex-initial sm:rounded-xl sm:gap-2 sm:px-6 sm:py-3.5 sm:text-base"
             >
               <span>{strings.hero.secondaryCta}</span>
-              <ArrowDown size={15} className="text-ink-soft" />
+              <ArrowDown
+                size={14}
+                className="shrink-0 text-ink-soft"
+                aria-hidden="true"
+              />
             </button>
           </motion.div>
 
-          {/* Small line */}
+          {/* Supporting text */}
           <motion.p
             {...textVariants(0.36)}
-            className="text-[11px] sm:text-[13px] text-ink-soft/70 font-medium text-center mx-auto tracking-wide"
+            className="mx-auto w-full text-center text-[10px] font-medium leading-tight tracking-wide text-ink-soft/70 sm:text-[13px]"
           >
             {strings.hero.subtext}
           </motion.p>
+
         </div>
       </div>
     </section>

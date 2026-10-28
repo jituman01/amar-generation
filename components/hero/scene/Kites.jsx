@@ -3,7 +3,7 @@ import { sceneConfig } from './sceneConfig';
 
 export function Kites() {
   return (
-    <div className="absolute inset-0 pointer-events-none select-none">
+    <div className="absolute inset-0 pointer-events-none select-none -translate-x-8 xs:-translate-x-10 sm:translate-x-0">
       {sceneConfig.kites.map((kite, index) => {
         const animClass = index % 2 === 0 ? 'animate-kite-1' : 'animate-kite-2';
 
