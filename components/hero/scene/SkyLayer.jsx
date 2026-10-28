@@ -12,74 +12,63 @@ export function SkyLayer() {
       />
 
       {/* ========================================================
-          REALISTIC BENGAL GOLDEN-HOUR SUN
-          Multi-stage luminous core, limb darkening, atmospheric corona,
-          soft horizon haze, and subtle crepuscular light rays
+          REALISTIC SOFT BENGAL SUN (স্নিগ্ধ নরম গোল সূর্য)
+          Properly positioned in upper-mid sky with a realistic soft disc,
+          natural limb feathering, warm atmospheric corona & gentle ambient bloom
           ======================================================== */}
-      <div className="absolute bottom-[30%] sm:bottom-[32%] right-[10%] sm:right-[18%] pointer-events-none select-none flex items-center justify-center opacity-20 sm:opacity-100 transition-opacity duration-300">
-        {/* 1. Broad Ambient Atmospheric Bloom (Soft Golden Haze) */}
+      <div className="absolute top-[12%] sm:top-[15%] md:top-[17%] right-[8%] sm:right-[14%] md:right-[18%] lg:right-[20%] pointer-events-none select-none flex items-center justify-center opacity-95 sm:opacity-100 transition-opacity duration-300">
+        {/* 1. Broad Ambient Atmospheric Bloom (বিশাল নরম সোনালী আভা) */}
         <div
-          className="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 blur-3xl opacity-60 animate-sun-ambient"
+          className="absolute w-64 h-64 sm:w-[420px] sm:h-[420px] rounded-full -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 blur-4xl opacity-50 animate-sun-ambient pointer-events-none"
           style={{
             background:
-              'radial-gradient(circle, rgba(245, 180, 80, 0.45) 0%, rgba(240, 160, 60, 0.22) 45%, rgba(243, 225, 200, 0) 75%)',
+              'radial-gradient(circle, rgba(251, 191, 36, 0.35) 0%, rgba(245, 158, 11, 0.18) 42%, rgba(249, 115, 22, 0.06) 68%, transparent 80%)',
           }}
         />
 
-        {/* 2. Soft Horizon Light Wash (Evening glow behind distant ridge) */}
+        {/* 2. Soft Atmospheric Corona (নরম কুয়াশাঘেরা আভা) */}
         <div
-          className="absolute w-[320px] sm:w-[460px] h-20 -translate-x-1/2 left-1/2 top-1/2 -translate-y-2 blur-2xl opacity-45 pointer-events-none"
+          className="absolute w-44 h-44 sm:w-64 sm:h-64 rounded-full -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 blur-xl opacity-65 animate-sun-pulse pointer-events-none"
           style={{
             background:
-              'radial-gradient(ellipse 70% 50% at 50% 50%, rgba(245, 170, 70, 0.6) 0%, rgba(240, 140, 50, 0.25) 50%, transparent 80%)',
+              'radial-gradient(circle, rgba(254, 215, 170, 0.6) 0%, rgba(251, 146, 60, 0.3) 45%, rgba(234, 88, 12, 0.1) 70%, transparent 85%)',
           }}
         />
 
-        {/* 3. Subtle Crepuscular Sunbeams (Gentle rotating warm light rays) */}
-        <div className="absolute w-64 h-64 sm:w-80 sm:h-80 -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 opacity-25 animate-sun-rays pointer-events-none">
-          <svg viewBox="0 0 200 200" className="w-full h-full">
-            <defs>
-              <radialGradient id="sunRayGrad" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#FFF2D6" stopOpacity="0.8" />
-                <stop offset="35%" stopColor="#F59E0B" stopOpacity="0.35" />
-                <stop offset="100%" stopColor="#F59E0B" stopOpacity="0" />
-              </radialGradient>
-            </defs>
-            {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((angle, i) => (
-              <polygon
-                key={angle}
-                points="100,100 97,0 103,0"
-                fill="url(#sunRayGrad)"
-                transform={`rotate(${angle} 100 100)`}
-                opacity={i % 2 === 0 ? 0.9 : 0.45}
-              />
-            ))}
-          </svg>
-        </div>
-
-        {/* 4. Secondary Corona (Atmospheric Diffusion Layer) */}
+        {/* 3. Inner Soft Golden Halo (সূর্যের স্নিগ্ধ বলয়) */}
         <div
-          className="absolute w-44 h-44 sm:w-56 sm:h-56 rounded-full -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 blur-lg opacity-80 animate-sun-pulse pointer-events-none"
+          className="absolute w-28 h-28 sm:w-40 sm:h-40 rounded-full -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 blur-md opacity-85 pointer-events-none"
           style={{
             background:
-              'radial-gradient(circle, rgba(254, 240, 138, 0.8) 0%, rgba(245, 158, 11, 0.5) 45%, rgba(234, 88, 12, 0.15) 70%, transparent 85%)',
+              'radial-gradient(circle, rgba(255, 237, 213, 0.8) 0%, rgba(253, 186, 116, 0.5) 50%, rgba(249, 115, 22, 0.15) 80%, transparent 100%)',
           }}
         />
 
-        {/* 5. Realistic Luminous Core Disk with Limb Darkening */}
+        {/* 4. Realistic Soft Round Sun Disc (নরম গোল সূর্য) */}
         <div
-          className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full shadow-[0_0_50px_rgba(245,158,11,0.55)] animate-sun-core pointer-events-none"
+          className="relative w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full pointer-events-none animate-sun-core"
           style={{
             background:
-              'radial-gradient(circle at 45% 45%, #FFFFFF 0%, #FFF8E7 15%, #FDE047 38%, #F59E0B 70%, #EA580C 95%, #C2410C 100%)',
+              'radial-gradient(circle at 48% 48%, #FFFDF7 0%, #FEF3C7 22%, #FDE68A 45%, #FBBF24 70%, #F59E0B 88%, #EA580C 100%)',
+            boxShadow:
+              '0 0 25px rgba(245, 158, 11, 0.45), 0 0 50px rgba(234, 88, 12, 0.25), inset 0 0 16px rgba(255, 255, 255, 0.65)',
           }}
         >
-          {/* Intense center glare */}
+          {/* Subtle natural edge softening / limb diffusion */}
           <div
-            className="absolute inset-[15%] rounded-full blur-[2px] opacity-90"
+            className="absolute -inset-0.5 rounded-full blur-[1.5px] pointer-events-none opacity-75"
             style={{
               background:
-                'radial-gradient(circle, #FFFFFF 0%, rgba(255,255,255,0.85) 40%, rgba(254,240,138,0) 75%)',
+                'radial-gradient(circle, transparent 65%, rgba(234, 88, 12, 0.4) 95%, rgba(194, 65, 12, 0.7) 100%)',
+            }}
+          />
+
+          {/* Gentle warm luminous center reflection */}
+          <div
+            className="absolute inset-[18%] rounded-full blur-[2px] opacity-80 pointer-events-none"
+            style={{
+              background:
+                'radial-gradient(circle at 48% 48%, #FFFFFF 0%, rgba(255, 253, 245, 0.85) 45%, rgba(254, 240, 138, 0) 80%)',
             }}
           />
         </div>
