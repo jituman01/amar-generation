@@ -29,13 +29,20 @@ export const viewport = {
 };
 
 export const metadata = {
+  metadataBase: new URL("https://amar-generation.vercel.app"),
   title: "Amar Generation — আমার জেনারেশন | ছোটবেলার গল্প, নিজের মতো করে",
   description: "তোমার শৈশবের খেলা, কার্টুন, খাবার আর স্মৃতিগুলো বেছে নাও। তৈরি করো তোমার নিজের Generation Card।",
+  icons: {
+    icon: "/logo-png.png",
+    shortcut: "/logo-png.png",
+    apple: "/logo-png.png",
+  },
   openGraph: {
     title: "Amar Generation — আমার জেনারেশন",
     description: "তোমার শৈশবের খেলা, কার্টুন, খাবার আর স্মৃতিগুলো বেছে নাও। তৈরি করো তোমার নিজের Generation Card।",
     type: "website",
     locale: "bn_BD",
+    images: ["/logo-png.png"],
   },
 };
 

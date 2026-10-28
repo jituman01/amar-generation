@@ -74,7 +74,7 @@ export function HeroScene() {
       <motion.div
         {...layerEntrance(0.25)}
         style={{ y: prefersReducedMotion ? 0 : farY }}
-        className="absolute inset-0"
+        className="absolute bottom-0 left-0 right-0 w-full h-[58vh] sm:h-full sm:inset-0"
       >
         <TreeLine />
       </motion.div>
@@ -83,7 +83,7 @@ export function HeroScene() {
       <motion.div
         {...layerEntrance(0.32)}
         style={{ y: prefersReducedMotion ? 0 : midY }}
-        className="absolute inset-0"
+        className="absolute bottom-0 left-0 right-0 w-full h-[58vh] sm:h-full sm:inset-0"
       >
         <Village />
       </motion.div>
@@ -92,7 +92,7 @@ export function HeroScene() {
       <motion.div
         {...layerEntrance(0.38)}
         style={{ y: prefersReducedMotion ? 0 : midY }}
-        className="absolute inset-0"
+        className="absolute bottom-0 left-0 right-0 w-full h-[58vh] sm:h-full sm:inset-0"
       >
         <RiceField />
       </motion.div>
@@ -101,7 +101,7 @@ export function HeroScene() {
       <motion.div
         {...layerEntrance(0.5)}
         style={{ y: prefersReducedMotion ? 0 : nearY }}
-        className="absolute inset-0"
+        className="absolute bottom-0 left-0 right-0 w-full h-[58vh] sm:h-full sm:inset-0"
       >
         <Foreground />
       </motion.div>
@@ -110,7 +110,7 @@ export function HeroScene() {
       <motion.div
         {...layerEntrance(0.56)}
         style={{ y: prefersReducedMotion ? 0 : nearY }}
-        className="absolute inset-0"
+        className="absolute bottom-0 left-0 right-0 w-full h-[58vh] sm:h-full sm:inset-0"
       >
         <Kids />
       </motion.div>
@@ -119,7 +119,7 @@ export function HeroScene() {
       <motion.div
         {...layerEntrance(0.62)}
         style={{ y: prefersReducedMotion ? 0 : nearY }}
-        className="absolute inset-0"
+        className="absolute bottom-0 left-0 right-0 w-full h-[58vh] sm:h-full sm:inset-0"
       >
         <Ambient />
       </motion.div>

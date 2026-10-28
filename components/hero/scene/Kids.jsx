@@ -11,7 +11,7 @@ export function Kids() {
         fill="none"
       >
         {/* ============ 1. LITTLE GIRL WITH FAST SPINNING CHORKI (চরকি) ============ */}
-        <g transform="translate(300, 346)">
+        <g transform="translate(380, 346)">
           {/* Ground Contact Shadow */}
           <ellipse cx="18" cy="52" rx="16" ry="4.5" fill="#2B1D16" opacity="0.28" />
 

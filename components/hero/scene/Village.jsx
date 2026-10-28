@@ -17,7 +17,8 @@ export function Village() {
         />
 
         {/* --- HUT 1 (Left-Center Village Homestead) --- */}
-        <g transform="translate(240, 215)">
+        {/* Desktop: translate(240,215), Mobile: translate(380,215) — moved inward for visibility */}
+        <g className="village-hut-1">
           {/* Stove Chimney Smoke rising — multiple curling puffs */}
           <circle cx="8" cy="-2" r="3" fill="#FAF6EF" className="animate-smoke" />
           <circle cx="10" cy="-8" r="4.5" fill="#FAF6EF" className="animate-smoke" style={{ animationDelay: '1.6s' }} />
@@ -82,7 +83,8 @@ export function Village() {
         </g>
 
         {/* --- HUT 2 (Right side homestead) --- */}
-        <g transform="translate(860, 222)">
+        {/* Desktop: translate(860,222), Mobile: translate(700,222) — moved inward for visibility */}
+        <g className="village-hut-2">
           <polygon points="22,-6 -4,14 48,14" fill="#B08968" stroke="#3E2C23" strokeWidth="1.2" />
           <polygon points="48,14 22,-6 68,0 88,14" fill="#8D6E63" stroke="#3E2C23" strokeWidth="1.2" />
           <rect x="0" y="14" width="44" height="28" fill="#FAF6EF" stroke="#3E2C23" strokeWidth="1.2" />
@@ -102,7 +104,7 @@ export function Village() {
         </g>
 
         {/* --- Grazing Cow/Goat in pasture with animated head and tail --- */}
-        <g transform="translate(680, 246)">
+        <g className="village-cow">
           {/* Body */}
           <ellipse cx="14" cy="10" rx="9" ry="5" fill="#FAF6EF" stroke="#3E2C23" strokeWidth="1.2" />
 
@@ -128,7 +130,7 @@ export function Village() {
         </g>
 
         {/* Banana Fronds near the huts — gentle leaf sway */}
-        <g transform="translate(355, 238)" className="animate-tree-sway">
+        <g className="village-banana animate-tree-sway">
           <path d="M0 25C-6 12 -22 6 -28 8C-22 14 -12 18 0 25" fill="#A3A070" />
           <path d="M0 25C6 10 24 4 30 6C24 14 14 18 0 25" fill="#A3A070" />
           <path d="M0 25C-2 8 -8 -4 -10 -10C-4 -4 3 8 0 25" fill="#8D8A58" />
